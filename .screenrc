@@ -1,0 +1,5 @@
+vbell off
+autodetach on
+startup_message off
+defscrollback 3000
+caption always "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%H %Y/%m/%d fuck me please."
