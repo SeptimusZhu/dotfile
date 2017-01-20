@@ -7,3 +7,4 @@ alias l='ls -al'
 alias ..='cd ..'
 alias ...='cd ..;cd ..'
 export PS1='\u:\w> '
+export CLICOLOR=1
