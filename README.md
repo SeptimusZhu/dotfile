@@ -1,3 +1,3 @@
-### my personal dot file repository.
-
+## my dot files
+#### usage
 ```sh setup.sh```
