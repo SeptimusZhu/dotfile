@@ -110,6 +110,7 @@ alias unproxy='unset all_proxy'
 alias top='vtop'
 alias m='cat ~/memo'
 bindkey ',' autosuggest-execute
+bindkey '^K' history-search-backward
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 proxy
 export JAVA_OPTS="$JAVA_OPTS -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=8118"
