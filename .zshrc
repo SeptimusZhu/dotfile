@@ -120,7 +120,7 @@ prompt_context() {
 }
 alias proxy='export all_proxy=socks5://127.0.0.1:1080'
 alias unproxy='unset all_proxy'
-alias top='vtop'
+alias top='vtop -t gooey'
 alias m='cat ~/memo'
 bindkey ',' autosuggest-execute
 bindkey '^K' history-search-backward
