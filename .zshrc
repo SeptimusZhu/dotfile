@@ -7,7 +7,8 @@ export ZSH=$HOME/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="agnoster"
+#ZSH_THEME="robbyrussell"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -59,7 +60,7 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git zsh-autosuggestions
+  git zsh-autosuggestions zsh-syntax-highlighting sublime
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -99,12 +100,24 @@ cdls() {
     cd "${1}";
     ls -alrt;
 }
+alias cp='cp -i'
+alias cat='bat'
 alias cd='cdls'
 alias l='ls -al'
 alias ..='cd ..'
 alias ...='cd ..;cd ..'
-#export PS1='\u:\w> '
 export CLICOLOR=1
+export DEFAULT_USER=`whoami`
+prompt_context() {
+    local seq
+    seq='%(!.{%F{yellow}%}.)%n'
+    if [[ "$USER" != "$DEFAULT_USER" ]]; then
+        seq="$seq@%m"
+    else
+        seq="Arya"
+    fi
+    prompt_segment black default $seq
+}
 alias proxy='export all_proxy=socks5://127.0.0.1:1080'
 alias unproxy='unset all_proxy'
 alias top='vtop'
