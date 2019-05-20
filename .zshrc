@@ -102,6 +102,7 @@ cdls() {
 }
 alias cp='cp -i'
 alias cat='bat'
+alias oldcat='cat'
 alias cd='cdls'
 alias l='ls -al'
 alias ..='cd ..'
