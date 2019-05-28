@@ -119,8 +119,8 @@ prompt_context() {
     fi
     prompt_segment black default $seq
 }
-alias proxy='export all_proxy=socks5://127.0.0.1:1080'
-alias unproxy='unset all_proxy'
+alias proxy='export all_proxy=socks5://127.0.0.1:1080;export http_proxy=http://127.0.0.1:8118;export https_proxy=$http_proxy'
+alias unproxy='unset all_proxy;unset http_proxy;unset https_proxy'
 alias top='vtop -t gooey'
 alias m='cat ~/memo'
 bindkey ',' autosuggest-execute
