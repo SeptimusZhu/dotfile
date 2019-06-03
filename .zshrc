@@ -123,9 +123,9 @@ alias proxy='export all_proxy=socks5://127.0.0.1:1080;export http_proxy=http://1
 alias unproxy='unset all_proxy;unset http_proxy;unset https_proxy'
 alias top='vtop -t gooey'
 alias m='cat ~/memo'
+alias c='clear'
 bindkey ',' autosuggest-execute
 bindkey '^K' history-search-backward
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
-proxy
 export JAVA_OPTS="$JAVA_OPTS -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=8118"
 #export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
