@@ -1,3 +1,4 @@
-## my dot files
-#### usage
+### usage
 ```sh setup.sh```
+
+> master branch for macos
