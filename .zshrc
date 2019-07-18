@@ -100,9 +100,9 @@ cdls() {
     cd "${1}";
     ls -alrt;
 }
+alias diff='icdiff'
 alias cp='cp -i'
 alias cat='bat'
-alias oldcat='cat'
 alias cd='cdls'
 alias l='ls -al'
 alias ..='cd ..'
@@ -121,6 +121,7 @@ prompt_context() {
 }
 alias proxy='export all_proxy=socks5://127.0.0.1:1080;export http_proxy=http://127.0.0.1:8118;export https_proxy=$http_proxy'
 alias unproxy='unset all_proxy;unset http_proxy;unset https_proxy'
+proxy
 alias top='vtop -t gooey'
 alias m='cat ~/memo'
 alias c='clear'
@@ -129,3 +130,5 @@ bindkey '^K' history-search-backward
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 export JAVA_OPTS="$JAVA_OPTS -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=8118"
 #export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
+
+eval $(thefuck --alias)
